@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav{
+    background-image: url('/public/assets/desktop/bg-pattern-header.svg');
+}
+body{background-color: #F2F2F2;
+min-height: 100vh;}
