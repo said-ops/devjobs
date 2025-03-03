@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        violet: "#9e7f66",
+        violet: "#5964E0",
         lightViolet: "#939BF4",
         veryDarkBlue: "#19202D",
         midnight: "#121721",
