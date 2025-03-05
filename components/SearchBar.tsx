@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "./common/Button";
 
 function SearchBar() {
   return (
-    <form action="" className="flex md:px-30 lg:px-44 py-8 px-8 font-kumbh relative translate-y-[-15px] ">
-      <fieldset className="flex items-center gap-1 bg-white p-4 flex-1  ">
+    <form action="" className="flex md:px-30 lg:px-44 py-8 px-8 font-kumbh relative translate-y-[-15px] rounded-lg overflow-hidden ">
+      <fieldset className="flex items-center gap-5 bg-white p-4 xl:flex-1 rounded-tl-lg rounded-bl-lg ">
         <label htmlFor="query">
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -15,7 +16,7 @@ function SearchBar() {
         </label>
         <input type="text" name="query" id="query"placeholder="Filter by title" className="w-full outline-none" />
       </fieldset>
-      <fieldset className="flex items-center gap-1 bg-white p-4">
+      <fieldset className="flex items-center gap-5 bg-white p-4">
         <label htmlFor="location">
           <svg width="17" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -27,12 +28,12 @@ function SearchBar() {
         </label>
         <input type="text" name="location" id="location" placeholder="location" className="outline-none"  />
       </fieldset>
-      <fieldset className="flex items-center gap-1 bg-white p-4">
+      <fieldset className="flex items-center gap-5 bg-white p-4 rounded-tr-lg rounded-br-lg">
       <input type="checkbox" name="contract" id="contract" className="w-5 h-5 accent-lightViolet" />
         <label htmlFor="contract" className="font-bold">
-          Full Time Only
+          Full Time 
         </label>
-        <button className="w-[128px] h-[48px] p-4 bg-violet font-kumbh font-semibold text-white rounded-sm ml-2 flex items-center justify-center">Search</button>
+        <Button/>
       </fieldset>
     </form>
   );
