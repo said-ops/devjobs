@@ -54,7 +54,7 @@ function SearchBar() {
               className=" w-4 h-4 lg:w-6 lg:h-6"
             />
             <label htmlFor="contract" className="font-kumbh md:font-semibold">
-              Full time only
+              Full time 
             </label>
           </div>
           <Button
