@@ -3,7 +3,7 @@ import React from "react";
 function JobCard() {
   return (
     // job card
-    <div className="flex flex-col justify-center gap-6 p-4 rounded-md transform transition-all ease-in-out  font-kumbh bg-white w-[327px] md:w-[339px] lg:w-[350px] h-56 m-auto">
+    <div className="flex flex-col justify-center gap-6 p-4 rounded-md transform transition-all ease-in-out  font-kumbh bg-white w-[320px] md:w-[339px] lg:w-[350px] h-56 m-auto">
       {/* logo */}
       <div className="w-[50px] h-[50px] bg-[hsl(36,87%,49%)] flex items-center justify-center rounded-xl absolute top-[-1.5rem] left-[1.5rem]">
         <img src="/assets/logos/scoot.svg" alt="company logo" />

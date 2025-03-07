@@ -7,7 +7,8 @@ function index() {
   return (
     <>
       <Header/>
-      <main className='trasnform translate-y-12 py-12 px-4 m-auto grid gap-y-16 lg:gap-x-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1110px]'>
+      <main >
+      <section className='trasnform translate-y-12 py-12 px-4 m-auto grid gap-y-16 lg:gap-x-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1110px]'>
         <JobCard/>
         <JobCard/>
         <JobCard/>
@@ -17,7 +18,10 @@ function index() {
         <JobCard/>
         <JobCard/>
         <JobCard/>
-        {/* <Button /> */}
+      </section>
+
+      
+      <Button w='w-36' h='h-12' bg='bg-violet' bgHover='hover:bg-lightViolet' text='Load More' m='my-[2rem] mx-auto' />
       </main>
     </>
   )
