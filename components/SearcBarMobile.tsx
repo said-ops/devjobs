@@ -33,7 +33,7 @@ function SearcBarMobile() {
         </svg>
         <Button h="h-12" w="w-12" icon={icon} bg="bg-violet" />
       </form>
-      <form className="w-[327px] h-[217px] hidden flex flex-col justify-between bg-white p-4  m-auto ">
+      <form className="w-[327px] h-[217px] hidden flex flex-col justify-between bg-white p-4  m-auto absolute z-30 left-1/2 transform -translate-x-1/2 ">
         <div className="flex h-1/3 items-center gap-4 p-2 border-b border-b-gray">
           <label htmlFor="location">
             <svg width="17" height="24" xmlns="http://www.w3.org/2000/svg">
