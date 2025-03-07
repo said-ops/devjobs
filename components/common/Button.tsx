@@ -1,10 +1,17 @@
 import React from "react";
 
-function Button() {
+interface ButtonProps {
+  w:string,
+  h:string,
+  bg:string,
+  bgHover:string,
+  text:string
+}
+const Button:React.FC<ButtonProps>=({w,h,bg,bgHover,text})=> {
   return (
-    <button className="lg:w-[128px] sm:h-[48px] md:w-[80px]  p-4 bg-violet font-kumbh font-semibold text-white rounded-sm ml-2 flex items-center justify-center">
-      Search
-    </button>
+    <button className={`flex items-center justify-center font-kumbh font-semibold text-white rounded-sm ${w} ${h} ${bg} ${bgHover}`}>
+    {text}
+  </button>
   );
 }
 
