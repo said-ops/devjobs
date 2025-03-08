@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import HeaderDetails from "@/components/HeaderDetails";
 import Button from "@/components/common/Button";
+import FooterDetails from "@/components/FooterDetails";
 
 function Details() {
   const router = useRouter();
@@ -135,6 +136,7 @@ function Details() {
           </div>
         </section>
       </main>
+      <FooterDetails/>
     </>
   );
 }
