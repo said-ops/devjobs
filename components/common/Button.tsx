@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 const Button:React.FC<ButtonProps>=({w,h,bg,bgHover,text,icon,m})=> {
   return (
-    <button className={`flex items-center ${m} justify-center font-kumbh font-semibold text-white rounded-sm ${w} ${h} ${bg} ${bgHover}`}>
+    <button className={`flex items-center  justify-center font-kumbh font-semibold text-white rounded-sm ${w} ${h} ${bg} ${bgHover} ${m}`}>
     {icon?icon:text}
   </button>
   );
