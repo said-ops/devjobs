@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './common/Button'
+import { Job } from '@/interface'
 
 
 function FooterDetails() {
@@ -8,7 +9,7 @@ function FooterDetails() {
     <section>
         <div className='flex justify-between max-w-[730px] m-auto p-4'>
         <div className='md:block hidden'>
-            <h2 className='text-[20px] text-veryDarkBlue font-bold '>Senior Software Engineer</h2>
+            <h2 className='text-[20px] text-veryDarkBlue font-bold '></h2>
             <p className='text-gray'>So Digital Inc.</p>
         </div>
         <Button

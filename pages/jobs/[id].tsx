@@ -118,7 +118,7 @@ function Details() {
           </div>
         </section>
       </main>
-      <FooterDetails />
+      <FooterDetails {...selectedJob} />
     </>
   );
 }
