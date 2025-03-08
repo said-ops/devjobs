@@ -1,7 +1,9 @@
 import React from 'react'
 import Button from './common/Button'
 
+
 function FooterDetails() {
+    
   return (
     <section>
         <div className='flex justify-between max-w-[730px] m-auto p-4'>
