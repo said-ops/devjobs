@@ -6,24 +6,24 @@ import FooterDetails from "@/components/FooterDetails";
 import useJobStore from "@/store/jobStore";
 
 function Details() {
-  const selectedJob =useJobStore(state=>state.selectedJob)
-    const selectJob =useJobStore(state=>state.selectJob)
-    const fetchJobs =useJobStore(state=>state.fetchJobs)
-    const route=useRouter()
-    const {id}=route.query
+  const selectedJob = useJobStore((state) => state.selectedJob);
+  const selectJob = useJobStore((state) => state.selectJob);
+  const fetchJobs = useJobStore((state) => state.fetchJobs);
+  const route = useRouter();
+  const { id } = route.query;
 
-    useEffect(() => {
-      const loadJob = async () => {
-        await fetchJobs(); 
-        if (id) {
-          const jobId = Number(id);
-          if (!isNaN(jobId)) {
-            selectJob(jobId);
-          }
+  useEffect(() => {
+    const loadJob = async () => {
+      await fetchJobs();
+      if (id) {
+        const jobId = Number(id);
+        if (!isNaN(jobId)) {
+          selectJob(jobId);
         }
-      };
-      loadJob();
-    }, [id]);
+      }
+    };
+    loadJob();
+  }, [id]);
   return (
     <>
       <HeaderDetails />
@@ -43,7 +43,9 @@ function Details() {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center flex-1 md:p-8 p-3">
             <div className="flex flex-col md:gap-4 gap-2 md:ml-8  font-kumbh">
-              <h1 className="text-[26px] text-veryDarkBlue font-bold">{selectedJob?.company}</h1>
+              <h1 className="text-[26px] text-veryDarkBlue font-bold">
+                {selectedJob?.company}
+              </h1>
               <p className="font-light text-gray">{selectedJob?.website}</p>
             </div>
             <Button
@@ -67,9 +69,11 @@ function Details() {
                 <span>{selectedJob?.contract}</span>
               </p>
               <h1 className="md:text-[26px] text-[19px] text-veryDarkBlue font-bold ">
-              {selectedJob?.position}
+                {selectedJob?.position}
               </h1>
-              <p className="text-violet font-semibold">{selectedJob?.location}</p>
+              <p className="text-violet font-semibold">
+                {selectedJob?.location}
+              </p>
             </div>
             <Button
               w="md:w-36"
@@ -82,7 +86,7 @@ function Details() {
           </div>
           {/* job desc    */}
           <p className="text-gray leading-7 text-[16px]">
-          {selectedJob?.description}
+            {selectedJob?.description}
           </p>
           {/* requirements */}
           <div className="flex flex-col gap-4">
@@ -90,10 +94,12 @@ function Details() {
               Requirements
             </h2>
             <p className="text-gray leading-7 text-[16px]">
-            {selectedJob?.requirements.content}
+              {selectedJob?.requirements.content}
             </p>
             <ul className="text-gray flex flex-col gap-2 list-disc marker:text-violet mt-4 ">
-            {selectedJob?.requirements.items.map((item,index)=><li key={index}>{item}</li>)}
+              {selectedJob?.requirements.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
           {/* what will you do */}
@@ -102,15 +108,17 @@ function Details() {
               What You Will Do
             </h2>
             <p className="text-gray leading-7 text-[16px]">
-            {selectedJob?.role.content}
+              {selectedJob?.role.content}
             </p>
             <ol className="text-gray flex flex-col gap-2 list-decimal marker:text-violet mt-4 ">
-            {selectedJob?.role.items.map((item,index)=><li key={index}>{item}</li>)}
+              {selectedJob?.role.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ol>
           </div>
         </section>
       </main>
-      <FooterDetails/>
+      <FooterDetails />
     </>
   );
 }
