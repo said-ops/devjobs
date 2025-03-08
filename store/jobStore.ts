@@ -12,6 +12,8 @@ interface jobStoreState{
     setLoading : (loading:boolean)=>void;
     loading:boolean;
     fetchJobs:()=>Promise<void>;
+    theme:string;
+    setTheme:(theme:string)=>void
 }
 
 const useJobStore = create<jobStoreState>((set) => ({
@@ -19,6 +21,14 @@ const useJobStore = create<jobStoreState>((set) => ({
     selectedJob:null,
     error:'',
     loading:false,
+    theme: typeof window !== "undefined" ? localStorage.getItem("theme") || "light" : "light",
+    setTheme :(theme)=>{
+        if(theme==='light') {
+            set({theme:'dark'})
+        }
+        else 
+            set({theme:'light'})   
+    },
     setError:(error)=>
         set(()=>({
             error,

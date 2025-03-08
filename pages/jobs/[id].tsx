@@ -30,7 +30,7 @@ function Details() {
       {/* comapny info */}
       <main className="md:max-w-[689px] lg:max-w-[730px] font-kumbh  mx-auto p-4 ">
         {/* deatils header  */}
-        <section className="flex flex-col md:flex-row bg-white overflow-hidden rounded-lg md:w-auto md:h-auto w-[327px] h-[205px] m-auto ">
+        <section className="flex flex-col md:flex-row bg-white dark:bg-[#19202D] overflow-hidden rounded-lg md:w-auto md:h-auto w-[327px] h-[205px] m-auto ">
           <div
             className="md:w-[140px] md:h-[140px] w-[50px] h-[50px] flex items-center justify-center m-auto rounded-md"
             style={{ backgroundColor: selectedJob?.logoBackground }}

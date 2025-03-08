@@ -4,7 +4,7 @@ import { Job } from "@/interface";
 function JobCard({  company, logo, logoBackground, position, postedAt, contract, location }:Job) {
   return (
     // job card
-    <div className="flex flex-col justify-center gap-6 p-4 rounded-md transform transition-all ease-in-out  font-kumbh bg-white w-[320px] md:w-[339px] lg:w-[350px] h-56 m-auto">
+    <div className="flex flex-col justify-center gap-6 p-4 rounded-md transform transition-all ease-in-out  font-kumbh bg-white dark:bg-veryDarkBlue w-[320px] md:w-[339px] lg:w-[350px] h-56 m-auto">
       {/* logo */}
       <div className={`w-[50px] h-[50px]  flex items-center justify-center rounded-xl absolute top-[-1.5rem] left-[1.5rem]`}
       style={{ backgroundColor: logoBackground }}
@@ -20,7 +20,7 @@ function JobCard({  company, logo, logoBackground, position, postedAt, contract,
           <span>{contract}</span>
         </div>
         {/* job title */}
-        <h2 className="text-veryDarkBlue text-[20px] font-bold">
+        <h2 className="text-veryDarkBlue dark:text-white text-[20px] font-bold">
           {position}
         </h2>
         {/* company name */}

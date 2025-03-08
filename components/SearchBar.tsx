@@ -7,9 +7,9 @@ function SearchBar() {
     <>
       <form
         action="#"
-        className=" bg-white min-h-[80px] xl:max-w-[1110px] mx-auto mt-6 rounded-md overflow-hidden shadow-lg hidden md:flex"
+        className=" bg-white dark:bg-veryDarkBlue min-h-[80px] xl:max-w-[1110px] mx-auto mt-6 rounded-md overflow-hidden shadow-lg hidden md:flex"
       >
-        <fieldset className=" flex-1 lg:flex-[2] flex items-center pl-4 gap-2 border-r-2 border-r-lightGrey ">
+        <fieldset className=" flex-1 lg:flex-[2] flex items-center pl-4 gap-2 border-r-2 border-r-lightGrey dark:border-r-veryDarkBlue ">
           <label htmlFor="query">
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -23,11 +23,11 @@ function SearchBar() {
             type="text"
             name="query"
             id="query"
-            className="flex-1 outline-0 h-full"
+            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue"
             placeholder="Filter by title, companies, experties"
           />
         </fieldset>
-        <fieldset className="flex-1  flex items-center  gap-2  pl-2 border-r-2 border-r-lightGrey">
+        <fieldset className="flex-1  flex items-center  gap-2  pl-2 border-r-2 border-r-lightGrey dark:border-r-veryDarkBlue ">
           <label htmlFor="location">
             <svg width="17" height="24" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -41,7 +41,7 @@ function SearchBar() {
             type="text"
             name="location "
             id="location"
-            className="flex-1 outline-0 h-full"
+            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue"
             placeholder="Filter by location"
           />
         </fieldset>
@@ -51,9 +51,9 @@ function SearchBar() {
               type="checkbox"
               name="contract"
               id="contract"
-              className=" w-4 h-4 lg:w-6 lg:h-6"
+              className=" w-4 h-4 lg:w-6 lg:h-6 dark:bg-black"
             />
-            <label htmlFor="contract" className="font-kumbh md:font-semibold">
+            <label htmlFor="contract" className="font-kumbh md:font-semibold dark:text-white">
               Full time 
             </label>
           </div>
