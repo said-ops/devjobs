@@ -38,7 +38,7 @@ const useJobStore = create<JobStoreState>((set) => ({
    title:'',
    location:'',
    isFullTime:false,  
-   visibleJobs:6,
+   visibleJobs:9,
    setVisibleJobs:()=>set((prev)=>({visibleJobs:prev.visibleJobs + 3})),
    setTitle :(title)=>set(()=>({title})) ,
    setLocation:(location)=>set(()=>({location})),
