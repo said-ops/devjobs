@@ -1,15 +1,29 @@
 import React from "react";
 import Button from "./common/Button";
 import SearcBarMobile from "./SearcBarMobile";
+import useJobStore from "@/store/jobStore";
 
 function SearchBar() {
+  const title = useJobStore((state) => state.title);
+  const location = useJobStore((state) => state.location);
+  const isFullTime = useJobStore((state) => state.isFullTime);
+  const setTitle = useJobStore((state) => state.setTitle);
+  const setContract = useJobStore((state) => state.setContract);
+  const setLocation = useJobStore((state) => state.setLocation);
+  const filterJobs = useJobStore((state) => state.filterJobs);
+
+  const handleSearch = (e: any) => {
+    e.preventDefault();
+    filterJobs(title, location, isFullTime);
+  };
+
   return (
     <>
       <form
         action="#"
-        className=" bg-white dark:bg-veryDarkBlue min-h-[80px] xl:max-w-[1110px] mx-auto mt-6 rounded-md overflow-hidden shadow-lg hidden md:flex"
+        className="bg-white dark:bg-veryDarkBlue min-h-[80px] xl:max-w-[1110px] mx-auto mt-6 rounded-md overflow-hidden shadow-lg hidden md:flex"
       >
-        <fieldset className=" flex-1 lg:flex-[2] flex items-center pl-4 gap-2 border-r-2 border-r-lightGrey dark:border-r-veryDarkBlue ">
+        <fieldset className="flex-1 lg:flex-[2] flex items-center pl-4 gap-2 border-r-2 border-r-lightGrey dark:border-r-veryDarkBlue">
           <label htmlFor="query">
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -25,9 +39,11 @@ function SearchBar() {
             id="query"
             className="flex-1 outline-0 h-full dark:bg-veryDarkBlue dark:text-white"
             placeholder="Filter by title, companies, experties"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </fieldset>
-        <fieldset className="flex-1  flex items-center  gap-2  pl-2 border-r-2 border-r-lightGrey dark:border-r-veryDarkBlue ">
+        <fieldset className="flex-1 flex items-center gap-2 pl-2 border-r-2 border-r-lightGrey dark:border-r-veryDarkBlue">
           <label htmlFor="location">
             <svg width="17" height="24" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -39,22 +55,29 @@ function SearchBar() {
           </label>
           <input
             type="text"
-            name="location "
+            name="location"
             id="location"
-            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue  dark:text-white"
+            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue dark:text-white"
             placeholder="Filter by location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
           />
         </fieldset>
-        <fieldset className="flex-1  flex items-center justify-between px-4  gap-2">
+        <fieldset className="flex-1 flex items-center justify-between px-4 gap-2">
           <div className="flex items-center gap-1">
             <input
               type="checkbox"
               name="contract"
               id="contract"
-              className=" w-4 h-4 lg:w-6 lg:h-6 dark:bg-black"
+              className="w-4 h-4 lg:w-6 lg:h-6 dark:bg-black"
+              checked={isFullTime}
+              onChange={() => setContract(!isFullTime)}
             />
-            <label htmlFor="contract" className="font-kumbh md:font-semibold dark:text-white">
-              Full time 
+            <label
+              htmlFor="contract"
+              className="font-kumbh md:font-semibold dark:text-white"
+            >
+              Full time
             </label>
           </div>
           <Button
@@ -63,6 +86,7 @@ function SearchBar() {
             bgHover="hover:bg-lightViolet"
             w="w-32"
             h="h-12"
+            onClick={(e:any) => handleSearch(e)}
           />
         </fieldset>
       </form>

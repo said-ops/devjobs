@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import Button from "./common/Button";
+import useJobStore from "@/store/jobStore";
 
 function SearcBarMobile() {
   const [open,setOpen]=useState(false)
+  const title = useJobStore((state) => state.title);
+  const location = useJobStore((state) => state.location);
+  const isFullTime = useJobStore((state) => state.isFullTime);
+  const setTitle = useJobStore((state) => state.setTitle);
+  const setContract = useJobStore((state) => state.setContract);
+  const setLocation = useJobStore((state) => state.setLocation);
+  const filterJobs = useJobStore((state) => state.filterJobs);
+
+  const handleSearch = (e: any) => {
+    e.preventDefault();
+    filterJobs(title, location, isFullTime);
+    setOpen(!open)
+  };
+
   const icon = (
     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -25,6 +40,8 @@ function SearcBarMobile() {
           className="h-full dark:bg-veryDarkBlue outline-0  dark:text-white
           "
           placeholder="Filter by title, companies, experties"
+          value={title}
+          onChange={(e)=>setTitle(e.target.value)}
         />
         <svg  onClick={()=>setOpen(!open)} width="20" height="20" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -52,6 +69,8 @@ function SearcBarMobile() {
             id="location"
             className="flex-1 outline-0 h-full dark:bg-veryDarkBlue dark:text-white"
             placeholder="Filter by location"
+            value={location}
+          onChange={(e)=>setLocation(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-4 p-2">
@@ -60,6 +79,8 @@ function SearcBarMobile() {
             name="contract"
             id="contract"
             className=" w-4 h-4 lg:w-6 lg:h-6"
+            checked={isFullTime}
+            onChange={() => setContract(!isFullTime)}
           />
           <label htmlFor="contract" className="font-kumbh md:font-semibold">
             Full time only
@@ -71,6 +92,7 @@ function SearcBarMobile() {
           bgHover="hover:bg-lightViolet"
           w="w-full"
           h="h-12"
+          onClick={e=>handleSearch(e)}
         />
       </form>
     </>

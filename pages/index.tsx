@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 
 function index() {
   const fetchJobs = useJobStore((state) => state.fetchJobs);
-  const jobs = useJobStore((state) => state.jobs);
+  const jobs = useJobStore((state) => state.filteredJobs);
   const [visibleJobs, setVisibleJobs] = useState(6);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function index() {
         <section className="trasnform translate-y-12 py-12 px-4 m-auto grid gap-y-16 lg:gap-x-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1110px]">
           {jobs.length > 0
             ? jobs.slice(0,visibleJobs).map((job) => <Link key={job.id}  href={`/jobs/${job.id}`}><JobCard {...job} /></Link>)
-            : "Loading..."}
+            : "No jobs were found"}
         </section>
 
         {visibleJobs<jobs.length&&
