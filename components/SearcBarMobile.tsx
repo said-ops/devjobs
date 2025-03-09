@@ -92,7 +92,7 @@ function SearcBarMobile() {
           bgHover="hover:bg-lightViolet"
           w="w-full"
           h="h-12"
-          onClick={e=>handleSearch(e)}
+          onClick={(e:any)=>handleSearch(e)}
         />
       </form>
     </>
