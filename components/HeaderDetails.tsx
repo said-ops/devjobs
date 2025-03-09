@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import SearchBar from "./SearchBar";
 import useJobStore from "@/store/jobStore";
 import Link from "next/link";
 

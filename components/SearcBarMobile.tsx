@@ -12,10 +12,10 @@ function SearcBarMobile() {
   const setLocation = useJobStore((state) => state.setLocation);
   const filterJobs = useJobStore((state) => state.filterJobs);
 
-  const handleSearch = (e:any) => {
+  const handleSearch = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     filterJobs(title, location, isFullTime);
-    setOpen(!open)
+    setOpen(!open);
   };
 
   const icon = (
@@ -92,7 +92,7 @@ function SearcBarMobile() {
           bgHover="hover:bg-lightViolet"
           w="w-full"
           h="h-12"
-          onClick={e=>handleSearch(e)}
+          onClick={handleSearch}
         />
       </form>
     </>
