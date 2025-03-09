@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 function Index() {
   const fetchJobs = useJobStore((state) => state.fetchJobs);
   const jobs = useJobStore((state) => state.filteredJobs);
-  const [visibleJobs, setVisibleJobs] = useState(6);
+  const [visibleJobs, setVisibleJobs] = useState(9);
 
   useEffect(() => {
     fetchJobs();
