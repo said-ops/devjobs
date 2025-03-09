@@ -12,7 +12,7 @@ function SearcBarMobile() {
   const setLocation = useJobStore((state) => state.setLocation);
   const filterJobs = useJobStore((state) => state.filterJobs);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e:any) => {
     e.preventDefault();
     filterJobs(title, location, isFullTime);
     setOpen(!open)
