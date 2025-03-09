@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
 import useJobStore from "@/store/jobStore";
+import Link from "next/link";
 
 function HeaderDetails() {
   const theme=useJobStore(state=>state.theme)
@@ -52,6 +53,7 @@ function HeaderDetails() {
       </svg>
       {/* logo sectio */}
       <div className="flex justify-between md:px-30 lg:px-44 py-8 px-8">
+      <Link href='/'>
         <svg
           width="115"
           height="32"
@@ -66,6 +68,7 @@ function HeaderDetails() {
             fill="white"
           />
         </svg>
+        </Link>
         {/* toggle button */}
         <label className="inline-flex gap-3 items-center cursor-pointer">
           <input type="checkbox" value={theme} onChange={()=>setTheme(theme)} checked={theme==='dark'} className="sr-only peer" />
