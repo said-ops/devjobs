@@ -8,7 +8,7 @@ interface ButtonProps {
   text?:string
   icon?:ReactNode,
   m?:string,
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?:()=>void
 }
 const Button:React.FC<ButtonProps>=({w,h,bg,bgHover,text,icon,m,onClick})=> {
   return (
