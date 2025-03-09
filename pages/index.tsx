@@ -12,7 +12,7 @@ function Index() {
 
   useEffect(() => {
     fetchJobs();
-  }, []);
+  }, [fetchJobs]);
 
   const loadMore = ()=>{
     setVisibleJobs(prev=>prev+3)

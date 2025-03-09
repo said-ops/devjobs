@@ -23,7 +23,7 @@ function Details() {
       }
     };
     loadJob();
-  }, [id]);
+  }, [id,fetchJobs,selectJob]);
   return (
     <>
       <HeaderDetails />
