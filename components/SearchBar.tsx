@@ -23,7 +23,7 @@ function SearchBar() {
             type="text"
             name="query"
             id="query"
-            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue"
+            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue dark:text-white"
             placeholder="Filter by title, companies, experties"
           />
         </fieldset>
@@ -41,7 +41,7 @@ function SearchBar() {
             type="text"
             name="location "
             id="location"
-            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue"
+            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue  dark:text-white"
             placeholder="Filter by location"
           />
         </fieldset>

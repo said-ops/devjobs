@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./common/Button";
 
 function SearcBarMobile() {
+  const [open,setOpen]=useState(false)
   const icon = (
     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -15,16 +16,17 @@ function SearcBarMobile() {
     <>
       <form
         action=""
-        className="md:hidden max-w-[323px] m-auto flex items-center justify-between bg-white p-4 rounded-md transform -translate-y-2.5"
+        className="md:hidden max-w-[323px] m-auto flex items-center justify-between bg-white dark:bg-veryDarkBlue p-4 rounded-md transform -translate-y-2.5"
       >
         <input
           type="text"
           name="query"
           id="query"
-          className="h-full"
+          className="h-full dark:bg-veryDarkBlue outline-0  dark:text-white
+          "
           placeholder="Filter by title, companies, experties"
         />
-        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <svg  onClick={()=>setOpen(!open)} width="20" height="20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"
             fill="#6E8098"
@@ -33,7 +35,7 @@ function SearcBarMobile() {
         </svg>
         <Button h="h-12" w="w-12" icon={icon} bg="bg-violet" />
       </form>
-      <form className="w-[327px] h-[217px] hidden flex flex-col justify-between bg-white p-4  m-auto absolute z-30 left-1/2 transform -translate-x-1/2 ">
+      <form className={`w-[327px] h-[217px] md:hidden  flex flex-col justify-between bg-white dark:bg-veryDarkBlue p-4  m-auto absolute z-30 left-1/2 transform -translate-x-1/2 ${open?'hidden':''} `}>
         <div className="flex h-1/3 items-center gap-4 p-2 border-b border-b-gray">
           <label htmlFor="location">
             <svg width="17" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +50,7 @@ function SearcBarMobile() {
             type="text"
             name="location "
             id="location"
-            className="flex-1 outline-0 h-full"
+            className="flex-1 outline-0 h-full dark:bg-veryDarkBlue dark:text-white"
             placeholder="Filter by location"
           />
         </div>
