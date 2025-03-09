@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100,200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100,200,300,400,500,600,700,800,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-nav{
-    background-image: url('/public/assets/desktop/bg-pattern-header.svg');
+nav {
+  background-image: url("/public/assets/desktop/bg-pattern-header.svg");
 }
-body{background-color: #F2F2F2;
-min-height: 100vh;}
-.dark{
-    background: #121721;
+body {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  position: relative;
+  z-index: -100;
+}
+.dark {
+  background: #121721;
 }

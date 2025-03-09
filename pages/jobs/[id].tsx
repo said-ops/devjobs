@@ -43,7 +43,7 @@ function Details() {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center flex-1 md:p-8 p-3">
             <div className="flex flex-col md:gap-4 gap-2 md:ml-8  font-kumbh">
-              <h1 className="text-[26px] text-veryDarkBlue font-bold">
+              <h1 className="text-[26px] text-veryDarkBlue dark:text-white font-bold">
                 {selectedJob?.company}
               </h1>
               <p className="font-light text-gray">{selectedJob?.website}</p>
@@ -59,7 +59,7 @@ function Details() {
           </div>
         </section>
         {/* job desc */}
-        <section className="my-8 bg-white md:p-16 p-4 rounded-md flex flex-col gap-16">
+        <section className="my-8 bg-white dark:bg-veryDarkBlue md:p-16 p-4 rounded-md flex flex-col gap-16">
           {/* job title */}
           <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
             <div className="flex flex-col gap-2 items-center md:items-start">
@@ -68,7 +68,7 @@ function Details() {
                 <span>.</span>
                 <span>{selectedJob?.contract}</span>
               </p>
-              <h1 className="md:text-[26px] text-[19px] text-veryDarkBlue font-bold ">
+              <h1 className="md:text-[26px] text-[19px] text-veryDarkBlue dark:text-white font-bold ">
                 {selectedJob?.position}
               </h1>
               <p className="text-violet font-semibold">
@@ -90,7 +90,7 @@ function Details() {
           </p>
           {/* requirements */}
           <div className="flex flex-col gap-4">
-            <h2 className="text-veryDarkBlue font-bold text-[20px]">
+            <h2 className="text-veryDarkBlue dark:text-white font-bold text-[20px]">
               Requirements
             </h2>
             <p className="text-gray leading-7 text-[16px]">
@@ -104,7 +104,7 @@ function Details() {
           </div>
           {/* what will you do */}
           <div className="flex flex-col gap-4">
-            <h2 className="text-veryDarkBlue font-bold text-[20px]">
+            <h2 className="text-veryDarkBlue dark:text-white font-bold text-[20px]">
               What You Will Do
             </h2>
             <p className="text-gray leading-7 text-[16px]">
