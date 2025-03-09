@@ -1,40 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# DevJobs
 
-## Getting Started
+DevJobs is a job listing platform designed to help job seekers find relevant job opportunities based on their preferences. The app allows users to search and filter job listings by title, location, and employment type (full-time or part-time). The platform aims to simplify the job search process with an easy-to-use interface and real-time data fetching.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Job Search**: Easily search for jobs by title and location.
+- **Filter Jobs**: Filter job listings by full-time or part-time employment type.
+- **Job Details**: View detailed information about each job, including job title, company name, location, and more.
+- **Responsive Design**: A mobile-friendly interface that adapts to various screen sizes.
+- **User-Friendly UI**: An intuitive and clean design to enhance the job searching experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshots
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+![Screenshot 1](public/images/screenshot1.png)
+![Screenshot 2](public/images/screenshot2.png)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Technologies Used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- **React.js**: JavaScript library for building the user interface.
+- **Next.js**: Framework for server-side rendering and static site generation.
+- **TypeScript**: A superset of JavaScript that adds static typing to improve code quality.
+- **Tailwind CSS**: Utility-first CSS framework for fast and responsive design.
+- **Zustand**: To manage state .
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js**: Version 14 or above
+- **npm**: Package manager for Node.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Steps to Set Up
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository to your local machine:
 
-## Deploy on Vercel
+    ```bash
+    git clone https://github.com/said-ops/devjobs.git
+    cd devjobs
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+    The app will be available at `http://localhost:3000` in your browser.
+
+## How It Works
+
+1. **Search Bar**: Users can search for jobs by entering a job title and location in the search bar.
+2. **Filters**: Filter jobs based on full-time or part-time status by selecting the appropriate filter options.
+3. **Job Cards**: Each job listing is displayed as a card that includes key details like the job title, company name, location, and employment type.
+4. **Job Details Page**: Clicking on a job card takes the user to a detailed page with more information about the job.
+
+
+
