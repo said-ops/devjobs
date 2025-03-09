@@ -7,11 +7,12 @@ interface ButtonProps {
   bgHover?:string,
   text?:string
   icon?:ReactNode,
-  m?:string
+  m?:string,
+  onClick?:()=>void
 }
-const Button:React.FC<ButtonProps>=({w,h,bg,bgHover,text,icon,m})=> {
+const Button:React.FC<ButtonProps>=({w,h,bg,bgHover,text,icon,m,onClick})=> {
   return (
-    <button className={`flex items-center  justify-center font-kumbh font-semibold text-white rounded-sm ${w} ${h} ${bg} ${bgHover} ${m}`}>
+    <button onClick={onClick} className={`flex items-center  justify-center font-kumbh font-semibold text-white rounded-sm ${w} ${h} ${bg} ${bgHover} ${m}`}>
     {icon?icon:text}
   </button>
   );
