@@ -5,14 +5,14 @@ import useJobStore from "@/store/jobStore";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-function index() {
+function Index() {
   const fetchJobs = useJobStore((state) => state.fetchJobs);
   const jobs = useJobStore((state) => state.filteredJobs);
   const [visibleJobs, setVisibleJobs] = useState(6);
 
   useEffect(() => {
     fetchJobs();
-  }, []);
+  });
 
   const loadMore = ()=>{
     setVisibleJobs(prev=>prev+3)
@@ -44,4 +44,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
