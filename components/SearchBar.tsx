@@ -12,7 +12,7 @@ function SearchBar() {
   const setLocation = useJobStore((state) => state.setLocation);
   const filterJobs = useJobStore((state) => state.filterJobs);
 
-  const handleSearch = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSearch = (e: any) => {
     e.preventDefault();
     filterJobs(title, location, isFullTime);
   };
@@ -86,7 +86,7 @@ function SearchBar() {
             bgHover="hover:bg-lightViolet"
             w="w-32"
             h="h-12"
-            onClick={(e:React.MouseEvent<HTMLButtonElement>) => handleSearch(e)}
+            onClick={(e:any) => handleSearch(e)}
           />
         </fieldset>
       </form>
