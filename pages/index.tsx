@@ -22,7 +22,7 @@ function Index() {
     <>
       <Header />
       <main>
-        <section className="trasnform translate-y-12 py-20 px-4 m-auto grid gap-y-16 lg:gap-x-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1110px]">
+        <section className="trasnform translate-y-12 py-24 px-4 m-auto grid gap-y-16 lg:gap-x-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1110px]">
           {jobs.length > 0
             ? jobs.slice(0,visibleJobs).map((job) => <Link key={job.id}  href={`/jobs/${job.id}`}><JobCard {...job} /></Link>)
             : "No jobs were found"}
